@@ -1,16 +1,16 @@
-# ==================== XOSD Full Auto Install Script ====================
+# XOSD Full Auto Install Script
 # System Requirements: Ubuntu 20.04 LTS / 6+ Core / 32GB RAM / 4TB NVMe
 # Chain ID: xos_1267-1 / Binary: v0.5.2 / Port Prefix: 33
-# =======================================================================
+#
 
-# =======================================================================
+# 
 sudo systemctl stop xosd
 sudo systemctl disable xosd
 sudo rm /etc/systemd/system/xosd.service
 sudo systemctl daemon-reexec
 sudo systemctl daemon-reload
 rm -rf ~/.xosd ~/.xosd/config ~/.xosd/data ~/.xosd/keyring-test ~/go/bin/xosd /usr/local/bin/xosd
-# =======================================================================
+#
 
 # Update & install dependencies
 sudo apt update && sudo apt upgrade -y
